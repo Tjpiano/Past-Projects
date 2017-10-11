@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang ="en">
+<head>
+<meta charset="UTF-8" />
+	<title>Tyler King Assignment 8</title>
+</head>
+<body>
+ <form id="form1" name="form" action="form.php" method="GET">
+ <legend>What fields do you want to view?</legend>
+ Id<input type="checkbox" class="check" name="check" value="ID">
+ Name<input type="checkbox" class="check" name="check" value="NAME">
+ Product<input type="checkbox" class="check" name="check" value="PRODUCT">
+ Quantity<input type="checkbox" class="check" ="check" value="QUANTITY"><br>
+<legend>What do you want to search up?</legend>
+Search for Book <input type="text" name="name"> In <input type="text" name="text">
+<input type='submit' value='Submit' onclick = 'check1=getValue()'>
+ </form>
+ <script>
+ function getValue(){
+ var work = document.getElementsByClassName('check');
+ var dir = '';
+ for(i=0; i<4; i++){
+ if(work[i].checked==true){
+ dir += work[i].value + ', ';
+ }
+ }
+ return dir;
+ }
+ </script>
+</body>
+</html>
